@@ -7,10 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 const appRoutes: Routes = [
-  // {path: '', component: HomeComponent},
-  // {path: 'characters', component: CharactersComponent},
-  // {path: 'add-character', component: AddCharacterComponent},
-  // {path: 'character/:id', component: CharacterComponent}
+
 ];
 
 @NgModule({
