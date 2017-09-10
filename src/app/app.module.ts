@@ -6,12 +6,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 const appRoutes: Routes = [
-  // {path: '', component: HomeComponent},
-  // {path: 'characters', component: CharactersComponent},
-  // {path: 'add-character', component: AddCharacterComponent},
-  // {path: 'character/:id', component: CharacterComponent}
+
 ];
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCiaoO7krCmrIg3lwmHcwkzF5GFlYeVvgc',
+  authDomain: 'nagularcharacters.firebaseapp.com',
+  databaseURL: 'https://nagularcharacters.firebaseio.com',
+  projectId: 'nagularcharacters',
+  storageBucket: 'nagularcharacters.appspot.com',
+  messagingSenderId: '120843569706'
+};
 
 @NgModule({
   declarations: [
@@ -21,7 +30,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
