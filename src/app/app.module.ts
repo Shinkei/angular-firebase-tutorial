@@ -8,9 +8,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AddPersonComponent } from './components/add-person/add-person.component';
+
+import { FirebaseService } from './services/firebase.service';
 
 const appRoutes: Routes = [
-
+  {path: 'add-person', component: AddPersonComponent}
 ];
 
 export const firebaseConfig = {
@@ -25,7 +28,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddPersonComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

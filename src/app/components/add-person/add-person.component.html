@@ -1,0 +1,14 @@
+<a [routerLink]="['/people']">Back</a>
+<br />
+<h2 class="page-header">Add Person</h2>
+<form (submit)="onAddSubmit()">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" type="text" [(ngModel)]="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label>Lastname</label>
+    <input class="form-control" type="text" [(ngModel)]="lastname" name="lastname" required>
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>
