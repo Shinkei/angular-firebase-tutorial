@@ -11,9 +11,13 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AddPersonComponent } from './components/add-person/add-person.component';
 
 import { FirebaseService } from './services/firebase.service';
+import { PeopleComponent } from './components/people/people.component';
+import { PersonComponent } from './components/person/person.component';
 
 const appRoutes: Routes = [
-  {path: 'add-person', component: AddPersonComponent}
+  {path: '', component: PeopleComponent},
+  {path: 'add-person', component: AddPersonComponent},
+  {path: 'person/:id', component: PersonComponent}
 ];
 
 export const firebaseConfig = {
@@ -29,7 +33,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddPersonComponent
+    AddPersonComponent,
+    PeopleComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

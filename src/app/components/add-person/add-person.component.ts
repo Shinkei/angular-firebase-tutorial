@@ -21,11 +21,11 @@ export class AddPersonComponent implements OnInit {
   onAddSubmit(){
     let person = {
       name: this.name,
-      race: this.lastname
+      lastname: this.lastname
     }
 
     this.firebaseService.addPerson(person);
-    // this.router.navigate(['/characters']);
+    this.router.navigate(['']);
   }
 
 }
