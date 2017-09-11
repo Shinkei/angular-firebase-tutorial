@@ -5,7 +5,9 @@
 ![first step](https://i2.wp.com/static.fjcdn.com/gifs/That+first+step+scary+as+fuck+i+know_3eabbb_4028841.gif)
 
 ### 1) Instalar firebase y angularfire
-> ```shell npm install -S firebase angularfire2```
+```shell 
+npm install -S firebase angularfire2
+```
 
 ### 2) Ir a la consola de firebase y copiar la configuración de la base de datos para la conexión.
 > Agregar la configuracion de firebase en el archivo app.module.ts asi:
