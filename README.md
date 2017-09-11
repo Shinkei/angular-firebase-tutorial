@@ -18,7 +18,8 @@ export const firebaseConfig = {
   projectId: '<databasename>',
   storageBucket: '<databasename>.appspot.com',
   messagingSenderId: '1234567890'
-}; ```
+}; 
+```
 
 ### 3) Importar los módulos necesarios de angularfire y agregarlos a nuestro app.module
 ```javascript 
@@ -34,6 +35,7 @@ imports: [
   RouterModule.forRoot(appRoutes),
   AngularFireModule.initializeApp(firebaseConfig),
   AngularFireDatabaseModule
-]```
+]
+```
 
 [Siguiente  >> ](https://github.com/Shinkei/angular-firebase-tutorial/tree/step1)
