@@ -1,28 +1,37 @@
-# AngularFirebaseTutorial
+# Angular 101 :fire:
+> En este tutorial haremos uso de angular y firebase por medio de la angularfire una librería que nos permitirá tener acceso desde nuestra aplicación a la base de datos en tiempo real.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+## Así que vamos a dar el primer paso
+![first step](https://i2.wp.com/static.fjcdn.com/gifs/That+first+step+scary+as+fuck+i+know_3eabbb_4028841.gif)
 
-## Development server
+### 1) Instalar firebase y angularfire
+> ```npm install -S firebase angularfire2```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 2) Ir a la consola de firebase y copiar la configuración de la base de datos para la conexión.
+> Agregar la configuracion de firebase en el archivo app.module.ts asi:
+>  ```javascript
+export const firebaseConfig = {
+  apiKey: 'AbCdEfGhIjKlMnOpQrStUvWxYz',
+  authDomain: '<databasename>.firebaseapp.com',
+  databaseURL: 'https://<databasename>.firebaseio.com',
+  projectId: '<databasename>',
+  storageBucket: '<databasename>.appspot.com',
+  messagingSenderId: '1234567890'
+};```
 
-## Code scaffolding
+### 3) Importar los módulos necesarios de angularfire y agregarlos a nuestro app.module
+> ```javascript 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+```
+### 4) Agregar los módulos a la sección de imports de nuestro app.module
+> ```javascript
+imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
+  ]```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Siguiente  >> ](https://github.com/Shinkei/angular-firebase-tutorial/tree/step1)
