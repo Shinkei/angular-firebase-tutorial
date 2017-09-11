@@ -9,7 +9,7 @@
 
 ### 2) Ir a la consola de firebase y copiar la configuración de la base de datos para la conexión.
 > Agregar la configuracion de firebase en el archivo app.module.ts asi:
->  ```javascript
+ ```javascript
 export const firebaseConfig = {
   apiKey: 'AbCdEfGhIjKlMnOpQrStUvWxYz',
   authDomain: '<databasename>.firebaseapp.com',
@@ -20,18 +20,18 @@ export const firebaseConfig = {
 };```
 
 ### 3) Importar los módulos necesarios de angularfire y agregarlos a nuestro app.module
-> ```javascript 
+```javascript 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 ```
 ### 4) Agregar los módulos a la sección de imports de nuestro app.module
-> ```javascript
+```javascript
 imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
-  ]```
+  BrowserModule,
+  FormsModule,
+  RouterModule.forRoot(appRoutes),
+  AngularFireModule.initializeApp(firebaseConfig),
+  AngularFireDatabaseModule
+]```
 
 [Siguiente  >> ](https://github.com/Shinkei/angular-firebase-tutorial/tree/step1)
