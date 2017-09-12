@@ -1,6 +1,6 @@
 # Angular 101 :fire:
 
-[ << Anterior](https://github.com/Shinkei/angular-firebase-tutorial/tree/step2)
+[ << Anterior](https://github.com/Shinkei/angular-firebase-tutorial/tree/step1)
 
 
 ## Buen trabajo!, ahora a crear los componentes para interactuar con nuestro servicio y encender nuestra app
@@ -173,3 +173,5 @@ const appRoutes: Routes = [
 ## Listo! ahora puedes agregar y consultar personas de tu base de datos en firebase.
 
 ![buen trabajo](https://i.giphy.com/media/XreQmk7ETCak0/giphy.gif)
+
+[Resultado Final](https://github.com/Shinkei/angular-firebase-tutorial/tree/step3)
