@@ -58,6 +58,28 @@ interface Person{
     this.angularFire.list('/people').push(person);
 }
 ```
+### 7) Agregar nuestro servicio a la lista de providers
+> **app.module.ts**
+> dentro de la lista de provider importar y agregar nuestro sevicio
+```javascript
+import { FirebaseService } from './services/firebase.service';
+```
+```javascript
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
+  ],
+  providers: [FirebaseService],
+bootstrap: [AppComponent]
+```
 
 [Siguiente  >> ](https://github.com/Shinkei/angular-firebase-tutorial/tree/step2)
 
