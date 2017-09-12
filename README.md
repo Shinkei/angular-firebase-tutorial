@@ -170,8 +170,5 @@ const appRoutes: Routes = [
   {path: 'person/:id', component: PersonComponent}
 ];
 ```
-## Listo! ahora puedes agregar y consultar personas de tu base de datos en firebase.
-
-![buen trabajo](https://i.giphy.com/media/XreQmk7ETCak0/giphy.gif)
 
 [Resultado Final](https://github.com/Shinkei/angular-firebase-tutorial/tree/step3)
